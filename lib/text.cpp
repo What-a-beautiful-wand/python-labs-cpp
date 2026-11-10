@@ -9,13 +9,6 @@ string normalize(const string& text, bool casefold = true, bool yo2e = true) {
             c = tolower(c);
         }
     }
-    if (yo2e) {
-        size_t pos = result.find('ё');
-        while (pos != string::npos) {
-            result[pos] = 'е';
-            pos = result.find('ё', pos + 1);
-        }
-    }
     return result;
 }
 
