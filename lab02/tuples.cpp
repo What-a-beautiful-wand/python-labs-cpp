@@ -74,10 +74,6 @@ string normalize_spaces(const string& text) {
     return result;
 }
 
-// Форматирует запись (ФИО, группа, GPA).
-// invalid_argument: ФИО не содержит 2–3 слов, группа пуста,
-// GPA не является конечным числом от 0 до 5 либо ФИО содержит неверный UTF-8.
-// Типы полей проверяются компилятором через StudentRecord.
 string format_record(const StudentRecord& rec) {
     const auto& [fio, group, gpa] = rec;
 
